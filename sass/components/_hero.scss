@@ -1,0 +1,49 @@
+.hero {
+  padding: 200px 0;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+  background-color: $hero-background-color;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.3)),
+    url(../images/hero-1.jpg);
+
+  &__title {
+    margin-bottom: 30px;
+    color: $primary-white-color;
+    text-align: center;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+.hero__button {
+  padding: 10px 32px;
+  color: $primary-white-color;
+  background: $accent-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: background-color;
+  transition-duration: $animation-duration;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background: #0385f0;
+  }
+}

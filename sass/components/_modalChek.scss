@@ -1,0 +1,58 @@
+.modalChek {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+
+  &__link {
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: $accent-color;
+    transform: color $animation-duration $timing-function;
+  }
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.modalChek__input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  background: $title-text-color;
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.modalChek__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  border-radius: 2px;
+  outline: none;
+  border: 2px solid black;
+  width: 16px;
+  height: 15px;
+  transition: background-color $animation-duration $timing-function;
+
+  .modalChek__input:checked + & {
+    background-color: $accent-color;
+    background-image: url(../images/icon-check-11.svg);
+    background-size: cover;
+    background-origin: border-box;
+    border-color: $accent-color;
+  }
+}
