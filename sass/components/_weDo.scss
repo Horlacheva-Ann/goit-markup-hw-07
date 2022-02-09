@@ -1,40 +1,40 @@
 .weDoList {
   display: flex;
+}
 
-  &__img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    width: 370px;
-  }
+.weDoList__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 370px;
+}
 
-  &__item {
-    position: relative;
-  }
+.weDoList__item {
+  position: relative;
 
-  & &__item + &__item {
+  & + & {
     margin-left: 30px;
   }
+}
 
-  &__card {
-    display: flex;
-    justify-content: center;
-    height: 70px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    align-items: center;
-    background: rgba(47, 48, 58, 0.8);
-  }
+.weDoList__card {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  background: rgba(47, 48, 58, 0.8);
+}
 
-  &__text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $primary-white-color;
-  }
+.weDoList__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
 }

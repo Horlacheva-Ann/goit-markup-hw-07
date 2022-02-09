@@ -1,39 +1,39 @@
 .projectList {
   display: flex;
   flex-wrap: wrap;
+}
 
-  &__card {
-    position: relative;
-    overflow: hidden;
-  }
+.projectList__card {
+  position: relative;
+  overflow: hidden;
+}
 
-  &__image {
-    display: block;
-    width: 370px;
-  }
+.projectList__image {
+  display: block;
+  width: 370px;
+}
 
-  &__projectInfo {
-    padding: 20px 24px;
-    border-right: $border;
-    border-bottom: $border;
-    border-left: $border;
-  }
+.projectList__projectInfo {
+  padding: 20px 24px;
+  border-right: $border;
+  border-bottom: $border;
+  border-left: $border;
+}
 
-  &__projectName {
-    margin-bottom: 4px;
-    color: $title-text-color;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-  }
+.projectList__title {
+  margin-bottom: 4px;
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
 
-  &__projectType {
-    color: $primary-text-color;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.03em;
-  }
+.projectList__text {
+  color: $primary-text-color;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
 }
 
 .projectList__item {

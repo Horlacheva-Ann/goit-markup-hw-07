@@ -8,19 +8,19 @@
   letter-spacing: 0.03em;
   color: $primary-text-color;
 
-  &__link {
-    margin-left: 5px;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    text-decoration-line: underline;
-    color: $accent-color;
-    transform: color $animation-duration $timing-function;
-  }
-
   &:focus {
     border-color: $accent-color;
   }
+}
+
+.modalChek__link {
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: $accent-color;
+  transform: color $animation-duration $timing-function;
 }
 
 .modalChek__input {

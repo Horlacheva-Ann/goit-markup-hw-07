@@ -2,22 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
 
-  &__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $primary-white-color;
-    margin-bottom: 20px;
-    transition: color $primary-white-color $animation-duration $timing-function;
-  }
+.appeal__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  margin-bottom: 20px;
+  transition: color $primary-white-color $animation-duration $timing-function;
+}
 
-  &__fields {
-    display: flex;
-    align-items: baseline;
-  }
+.appeal__fields {
+  display: flex;
+  align-items: baseline;
 }
 
 .appeal__input {
