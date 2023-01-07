@@ -1,0 +1,109 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  padding-left: $pentadeca-gap_1x;
+  padding-right: $pentadeca-gap_1x;
+  padding-top: $xeno-gap_f;
+
+  overflow-y: scroll;
+
+  background-color: $backdrop-bg;
+
+  // transition: opacity 250ms $cubic;
+  @include transition(opacity);
+
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+
+  max-width: getWidth('mobileBox');
+
+  margin-left: auto;
+  margin-right: auto;
+
+  opacity: 0;
+  transition: opacity 250ms $cubic, transform 250ms $cubic;
+
+  background: getColor('primary-bg');
+  box-shadow: 0px 1px 3px $shadow-12, 0px 1px 1px $shadow-14,
+    0px 2px 1px $backdrop-bg;
+  border-radius: 4px;
+
+  &--active {
+    opacity: 1;
+    @include respond-from-min('tablet') {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &__content {
+    // Responsive height
+    height: calc(100% - $pentadeca-gap_2x);
+    padding: $deca-gap_4x;
+    overflow-y: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: $octa-gap;
+    right: $octa-gap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid $shadow-border;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  &__icon {
+    width: 11px;
+    height: 11px;
+    fill: getColor('ternary-text');
+  }
+
+  &__close:hover > &__icon,
+  &__close:focus > &__icon {
+    fill: getColor('accent');
+  }
+
+  &__title {
+    display: box;
+    font-weight: 700;
+    font-size: $modal-title;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: getColor('secondary-text');
+    margin-bottom: $dodeca-gap_1x;
+  }
+
+  // Desktop styles
+  @include respond-from-min('tablet') {
+    & {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+
+      width: 528px;
+      height: 581px;
+    }
+
+    &--active {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
